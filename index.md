@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+# Essential Dev Hacks
 
-You can use the [editor on GitHub](https://github.com/olimjonibr/hacks.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+## MySQL Hacks
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Recovering _root_ user and its privileges
 
-### Markdown
+1. Stop MySQL service 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+`$ service mysql stop`
 
-```markdown
-Syntax highlighted code block
+2. Create directory for **mysqld**
 
-# Header 1
-## Header 2
-### Header 3
+`$ sudo mkdir -p /var/run/mysqld
+$ sudo chown mysql:mysql /var/run/mysqld`
 
-- Bulleted
-- List
+3. Access mysqld
 
-1. Numbered
-2. List
+`$ mysqld_safe --skip-grant-tables &
+mysql -u root -p`
 
-**Bold** and _Italic_ and `Code` text
+4. Recreate _root_ user
+`mysql> CREATE USER 'root'@'localhost';
+Query OK, 0 rows affected (0,00 sec)`
 
-[Link](url) and ![Image](src)
-```
+5. Give permissions 
+`mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+Query OK, 0 rows affected (0,00 sec)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/olimjonibr/hacks.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0,01 sec)`
