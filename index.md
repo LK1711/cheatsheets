@@ -21,7 +21,7 @@ $ sudo chown mysql:mysql /var/run/mysqld
 3. Access mysqld
 
 ```
-$ mysqld_safe --skip-grant-tables &
+$ sudo mysqld_safe --skip-grant-tables &
 
 mysql -u root -p
 ```
@@ -29,6 +29,10 @@ mysql -u root -p
 4. Give permissions 
 
 ```
+mysql> UPDATE mysql.user SET Grant_priv='Y', Super_priv='Y' WHERE User='root';
+
+mysql> FLUSH PRIVILEGES;
+
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';
 
 Query OK, 0 rows affected (0,00 sec)
