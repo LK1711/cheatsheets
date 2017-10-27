@@ -6,7 +6,9 @@
 
 1. Stop MySQL service 
 
-```$ service mysql stop```
+```
+$ service mysql stop
+```
 
 2. Create directory for **mysqld**
 
