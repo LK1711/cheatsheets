@@ -1,20 +1,22 @@
-# hacks
-Essential Dev Hacks
+# Essential Dev Hacks
 
-# MySQL Hacks
+## MySQL Hacks
 
-## Recovering _root_ user and its privileges
+### Recovering _root_ user and its privileges
 
-Stop MySQL service 
+1. Stop MySQL service 
 
 `$ service mysql stop`
 
-Create directory for **mysqld**
-`$ mkdir -p /var/run/mysqld`
-`$ chown mysql:mysql /var/run/mysqld`
+2. Create directory for **mysqld**
 
-Run mysqld_safe --skip-grant-tables &
-Type mysql -u root -p and press enter.
+`$ sudo mkdir -p /var/run/mysqld`
+`$ sudo chown mysql:mysql /var/run/mysqld`
+
+3. Access mysqld
+
+`$ mysqld_safe --skip-grant-tables &`
+`mysql -u root -p`
 Enter your password
 At the mysql command line enter: use mysql;
 
