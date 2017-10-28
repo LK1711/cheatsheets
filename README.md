@@ -1,6 +1,4 @@
-# Essential Dev Hacks
-
-## MySQL Hacks
+## MySQL Cheat Sheet
 
 ### Recovering _root_ user's privileges
 
@@ -35,3 +33,4 @@ mysql> FLUSH PRIVILEGES;
 
 Query OK, 0 rows affected (0,01 sec)
 ```
+
