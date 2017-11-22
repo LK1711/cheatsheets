@@ -36,3 +36,8 @@ mysql> FLUSH PRIVILEGES;
 Query OK, 0 rows affected (0,01 sec)
 ```
 
+5. Reset Auto Increment
+
+```
+ALTER TABLE table_name AUTO_INCREMENT = 1;
+```
