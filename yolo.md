@@ -1,5 +1,7 @@
 ### "detector test" VS "detect" 
 
+#### For a single image
+
 "detector test" allows you to select appropriate configuration setup (.data file)
 
 ``` 
@@ -11,6 +13,17 @@ Whereas, "detect" runs predefined .data files in the background
 ```
 ./darknet detect cfg/tiny-yolo-voc.cfg weights/tiny-yolo-voc.weights foto.jpg 
 ```
+#### For a set of images
+1. Set the folder name in **detector.c** 
+2. Create a target folder for storing the detection results
+3. Set the target folder name in **detector.c**
+``` 
+./darknet detector test cfg/voc.data cfg/tiny-yolo-voc.cfg weights/tiny-yolo-voc.weights 
+``` 
+```
+./darknet detect cfg/tiny-yolo-voc.cfg weights/tiny-yolo-voc.weights
+```
+
 
 ### Run YOLO to detect VOC objects (20 classes: person, etc)
 
