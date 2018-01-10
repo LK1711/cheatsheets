@@ -41,3 +41,8 @@ Query OK, 0 rows affected (0,01 sec)
 ```
 ALTER TABLE table_name AUTO_INCREMENT = 1;
 ```
+
+6. Copy Table Structure
+```
+CREATE TABLE foo SELECT * FROM bar WHERE 1=0
+```
