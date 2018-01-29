@@ -53,3 +53,10 @@ char *remove(char* mystr) {
 }
 ```
 source (https://stackoverflow.com/questions/2736753/how-to-remove-extension-from-file-name)
+
+
+### Start Stream based on own trained weights
+
+```
+./darknet detector demo data/containers.data cfg/yolo_containers12.cfg backup/training-2017-08-18/yolo_containers12_final.weights
+```
