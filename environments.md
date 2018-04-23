@@ -15,3 +15,18 @@ pip install MySQL-python
 ```
 pip install Pillow
 ```
+
+### 4. Install Jupyter related packages
+```
+conda install notebook ipykernel
+```
+
+### 5. View installed packages in an environment
+```
+conda list -n <venv-name>
+```
+
+### 6. View installed packages in the default conda environment
+```
+conda list
+```
