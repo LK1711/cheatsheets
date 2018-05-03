@@ -115,3 +115,7 @@ COPY ./local/file.conf /into/directory/in/container.conf
 ```docker build -t <image-name>:<image-version> .```
 
 ```-t``` - give it a tag - name:version. ```.``` - indicates to use current directory to build the stuff. 
+
+### 8. ```Run``` command: other parameters
+
+```--rm``` automatically cleans up the container and removes the file system when the container exits
