@@ -101,6 +101,6 @@ COPY ./local/file.conf /into/directory/in/container.conf
 
 ```COPY``` is not the same as volume mounting.
 
-```docker build -t <image-name>:<image-version> .
+```docker build -t <image-name>:<image-version> .```
 
 ```-t``` - give it a tag - name:version. ```.``` - indicates to use current directory to build the stuff. 
