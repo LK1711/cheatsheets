@@ -77,9 +77,13 @@ Once a container is created with runtime settings, it cannot be changed. You hav
 
 ```docker exec``` allows to run a command inside of running container. ```-ti``` used to run in interactive mode. Once you execute this command you are inside of the container as ```root``` user.
 
-**Volume mounting files** ```docker run ... -v /some/local/configfile.conf:/configfile/in/container.conf:ro``` (``ro`` - read-only)
+**Volume mounting files** 
 
-**Volume mounting directories** ```docker run ... -v /some/local/directory:/directory/in/container:ro```
+```docker run ... -v /some/local/configfile.conf:/configfile/in/container.conf:ro``` (``ro`` - read-only)
+
+**Volume mounting directories** 
+
+```docker run ... -v /some/local/directory:/directory/in/container:ro```
 
 ### 6. Stop and remove
 ```
@@ -100,6 +104,8 @@ COPY ./local/file.conf /into/directory/in/container.conf
 ```
 
 ```COPY``` is not the same as volume mounting.
+
+**Build the image**
 
 ```docker build -t <image-name>:<image-version> .```
 
