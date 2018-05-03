@@ -92,9 +92,9 @@ Once a container is created with runtime settings, it cannot be changed. You hav
 
 ### 6. Stop and remove
 ```
-docker stop <container-name
+docker stop <container-name>
 
-docker rm <container-name
+docker rm <container-name>
 ```
 
 ### 7. Creating own images
