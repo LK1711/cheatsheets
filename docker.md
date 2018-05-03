@@ -1,9 +1,9 @@
 ## Installation Guide for Linux (Ubuntu 16.04)
 
 *Resources: *
-*1. [Official installation guide](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-*2. [Full uninstall of Docker](https://askubuntu.com/questions/935569/how-to-completely-uninstall-docker)
-*3. [Getting started with docker](https://www.youtube.com/watch?v=Vyp5_F42NGs)*
+1. *[Official installation guide](https://docs.docker.com/install/linux/docker-ce/ubuntu/)*
+2. *[Full uninstall of Docker](https://askubuntu.com/questions/935569/how-to-completely-uninstall-docker)*
+3. *[Getting started with docker](https://www.youtube.com/watch?v=Vyp5_F42NGs)*
 
 Description: Docker Engine is Linux Virtual Machine which allows containers to share the same resources. Docker is based on Linux container technology.
 
