@@ -1,15 +1,17 @@
 ## Installation Guide for Linux (Ubuntu 16.04)
 
-*Resources: 
-1. [Official installation guide](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-2. [Full uninstall of Docker](https://askubuntu.com/questions/935569/how-to-completely-uninstall-docker)
-3. [Getting started with docker](https://www.youtube.com/watch?v=Vyp5_F42NGs)*
+*Resources: *
+*1. [Official installation guide](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
+*2. [Full uninstall of Docker](https://askubuntu.com/questions/935569/how-to-completely-uninstall-docker)
+*3. [Getting started with docker](https://www.youtube.com/watch?v=Vyp5_F42NGs)*
 
 Description: Docker Engine is Linux Virtual Machine which allows containers to share the same resources. Docker is based on Linux container technology.
+
 ```docker --version```
-```docker-compose --version```
 
 **Docker-Compose** - a tool for defining and running multi-container Docker applications from one file. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services (containers) from your configuration. To learn more about all the features of Compose, see the list of features.
+
+```docker-compose --version```
 
 [**Docker Hub**](https://hub.docker.com) contains docker images.
 
