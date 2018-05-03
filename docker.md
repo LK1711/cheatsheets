@@ -5,6 +5,7 @@
 Description: Docker Engine is Linux Virtual Machine which allows containers to share the same resources. Docker is based on Linux container technology.
 ```docker --version```
 ```docker-compose --version```
+
 **Docker-Compose** - a tool for defining and running multi-container Docker applications from one file. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services (containers) from your configuration. To learn more about all the features of Compose, see the list of features.
 
 [**Docker Hub**](https://hub.docker.com) contains docker images.
