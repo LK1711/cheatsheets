@@ -59,15 +59,26 @@ sudo docker run hello-world
 ```
 
 ### 4. Installing images
-##### 4.1. Pull an image and store locally (that makes it super easy to copy and install an environment on any suitable machine)
+#### 4.1. Pull an image and store locally (that makes it super easy to copy and install an environment on any suitable machine)
 ```docker pull <image-name>:<image-version>```
-##### 4.2. Name a container properly
-```docker run --name <my-container> <image-name>:<image-version>```
-##### 4.3. Give parameters
+#### 4.2. Name a container properly
+```docker run --name <container-name> <image-name>:<image-version>```
+#### 4.3. Give parameters
 Define port ```-p 80:80```
 
 Use deamon to let the container run in background ```-d```
 
 ### 5. Issues with container parametrization 
-Once a container is created with runtime settings, it cannot be changed. You have to recreate a new container with new settings. In this case, the data created in the container will be lost
+Once a container is created with runtime settings, it cannot be changed. You have to recreate a new container with new settings. In this case, the data created in the container will be lost. **Solution:** put the data outside of containers and map it using volumes.
 
+```docker exec -ti <container-name> /bin/sh```
+```docker exec``` allows to run a command inside of running container. ```-ti``` used to run in interactive mode. Once you execute this command you are inside of the container as ```root``` user.
+
+**Volume mounting** ```docker run ... -v /some/local/configfile.conf:/configfile/in/container.conf:ro```
+
+### 6. Stop and remove
+```
+docker stop <container-name
+
+docker rm <container-name
+```
