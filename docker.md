@@ -65,6 +65,7 @@ sudo docker run hello-world
 ```docker run --name <my-container> <image-name>:<image-version>```
 ##### 4.3. Give parameters
 Define port ```-p 80:80```
+
 Use deamon to let the container run in background ```-d```
 
 ### 5. Issues with container parametrization 
